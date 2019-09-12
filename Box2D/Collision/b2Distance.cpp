@@ -600,7 +600,7 @@ void b2Distance(b2DistanceOutput* output,
 bool b2ShapeCast(b2ShapeCastOutput * output, const b2ShapeCastInput * input)
 {
     output->iterations = 0;
-    output->lambda = 0_fx;
+    output->lambda = 1_fx;
     output->normal.SetZero();
     output->point.SetZero();
 

@@ -28,8 +28,8 @@ inline bool b2IsValid(float32 x)
     return !x.isinf(); // isfinite(x);
 }
 
-#define	b2Sqrt(x)	    x.sqrt()  // sqrtf(x)
-#define	b2Atan2(y, x)	y.atan(x) // atan2f(y, x)
+#define	b2Sqrt(x)	    (x).sqrt()  // sqrtf(x)
+#define	b2Atan2(y, x)	(y).atan(x) // atan2f(y, x)
 
 /// A 2D column vector.
 struct b2Vec2
