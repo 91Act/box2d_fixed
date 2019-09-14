@@ -1,3 +1,9 @@
+# Description
+
+This is a box2d fork. Everything is unchanged except the value type `float32` has been replaced by the [fixed point](https://github.com/91Act/fixed_math).
+
+---
+
 ![Box2D Logo](http://box2d.org/images/icon.gif)
 
 # Box2D 
