@@ -29,20 +29,20 @@ workspace 'Box2D'
 
 project 'Box2D'
 	kind 'StaticLib'
-	files { 'Box2D/**' }
-	includedirs { '.' }
+	files { 'Box2D/**', 'fixed_math/**' }
+	includedirs { '.', 'fixed_math' }
 
 project 'HelloWorld'
 	kind 'ConsoleApp'
 	files { 'HelloWorld/HelloWorld.cpp' }
-	includedirs { '.' }
+	includedirs { '.', 'fixed_math' }
 	links { 'Box2D' }
 
 project 'Testbed'
 	kind 'ConsoleApp'
 	debugdir 'Testbed'
 	warnings 'Default'
-	includedirs { '.' }
+	includedirs { '.', 'fixed_math' }
 
 	files
 	{
