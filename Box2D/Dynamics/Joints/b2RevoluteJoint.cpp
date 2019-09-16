@@ -498,14 +498,14 @@ void b2RevoluteJoint::Dump()
 	b2Log("  jd.bodyA = bodies[%d];\n", indexA);
 	b2Log("  jd.bodyB = bodies[%d];\n", indexB);
 	b2Log("  jd.collideConnected = bool(%d);\n", m_collideConnected);
-	b2Log("  jd.localAnchorA.Set(%.15lef, %.15lef);\n", m_localAnchorA.x.to_float(), m_localAnchorA.y.to_float());
-	b2Log("  jd.localAnchorB.Set(%.15lef, %.15lef);\n", m_localAnchorB.x.to_float(), m_localAnchorB.y.to_float());
-	b2Log("  jd.referenceAngle = %.15lef;\n", m_referenceAngle.to_float());
-	b2Log("  jd.enableLimit = bool(%d);\n", m_enableLimit);
-	b2Log("  jd.lowerAngle = %.15lef;\n", m_lowerAngle.to_float());
-	b2Log("  jd.upperAngle = %.15lef;\n", m_upperAngle.to_float());
+	b2Log("  jd.localAnchorA.Set(%.15lef, %.15lef);\n", (float)m_localAnchorA.x, (float)m_localAnchorA.y);
+	b2Log("  jd.localAnchorB.Set(%.15lef, %.15lef);\n", (float)m_localAnchorB.x, (float)m_localAnchorB.y);
+	b2Log("  jd.referenceAngle = %.15lef;\n", (float)m_referenceAngle);
+	b2Log("  jd.enableLimit = bool(%d);\n", (float)m_enableLimit);
+	b2Log("  jd.lowerAngle = %.15lef;\n", (float)m_lowerAngle);
+	b2Log("  jd.upperAngle = %.15lef;\n", (float)m_upperAngle);
 	b2Log("  jd.enableMotor = bool(%d);\n", m_enableMotor);
-	b2Log("  jd.motorSpeed = %.15lef;\n", m_motorSpeed.to_float());
-	b2Log("  jd.maxMotorTorque = %.15lef;\n", m_maxMotorTorque.to_float());
+	b2Log("  jd.motorSpeed = %.15lef;\n", (float)m_motorSpeed);
+	b2Log("  jd.maxMotorTorque = %.15lef;\n", (float)m_maxMotorTorque);
 	b2Log("  joints[%d] = m_world->CreateJoint(&jd);\n", m_index);
 }

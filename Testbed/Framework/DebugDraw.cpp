@@ -732,7 +732,7 @@ void DebugDraw::DrawCircle(const b2Vec2& center, float32 radius, const b2Color& 
     float32 cosInc = k_increment.cos();
     b2Vec2 r1(1_fx, 0_fx);
     b2Vec2 v1 = center + radius * r1;
-	for (int32 i = 0; i < k_segments.to_float(); ++i)
+	for (int32 i = 0; i < (float)k_segments; ++i)
 	{
         // Perform rotation to avoid additional trigonometry.
         b2Vec2 r2;
@@ -757,7 +757,7 @@ void DebugDraw::DrawSolidCircle(const b2Vec2& center, float32 radius, const b2Ve
     b2Vec2 r1(cosInc, sinInc);
     b2Vec2 v1 = center + radius * r1;
 	b2Color fillColor("0.5"_fx * color.r, "0.5"_fx * color.g, "0.5"_fx * color.b, "0.5"_fx);
-	for (int32 i = 0; i < k_segments.to_float(); ++i)
+	for (int32 i = 0; i < (float)k_segments; ++i)
 	{
         // Perform rotation to avoid additional trigonometry.
         b2Vec2 r2;
@@ -773,7 +773,7 @@ void DebugDraw::DrawSolidCircle(const b2Vec2& center, float32 radius, const b2Ve
 
     r1.Set(1_fx, 0_fx);
     v1 = center + radius * r1;
-	for (int32 i = 0; i < k_segments.to_float(); ++i)
+	for (int32 i = 0; i < (float)k_segments; ++i)
 	{
         b2Vec2 r2;
         r2.x = cosInc * r1.x - sinInc * r1.y;

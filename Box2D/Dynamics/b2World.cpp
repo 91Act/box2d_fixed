@@ -1313,7 +1313,7 @@ void b2World::Dump()
 		return;
 	}
 
-	b2Log("b2Vec2 g(%.15lef, %.15lef);\n", m_gravity.x.to_float(), m_gravity.y.to_float());
+	b2Log("b2Vec2 g(%.15lef, %.15lef);\n", (float)m_gravity.x, (float)m_gravity.y);
 	b2Log("m_world->SetGravity(g);\n");
 
 	b2Log("b2Body** bodies = (b2Body**)b2Alloc(%d * sizeof(b2Body*));\n", m_bodyCount);

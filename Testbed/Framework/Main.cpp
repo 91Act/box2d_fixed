@@ -247,7 +247,7 @@ static void sMouseButton(GLFWwindow* window, int32 button, int32 action, int32 m
 
 	double xd, yd;
 	glfwGetCursorPos(mainWindow, &xd, &yd);
-	b2Vec2 ps(float32::fmake(xd), float32::fmake(yd));
+	b2Vec2 ps((float32)(xd), (float32)(yd));
 
 	// Use the mouse to move things around.
 	if (button == GLFW_MOUSE_BUTTON_1)
@@ -290,7 +290,7 @@ static void sMouseButton(GLFWwindow* window, int32 button, int32 action, int32 m
 //
 static void sMouseMotion(GLFWwindow*, double xd, double yd)
 {
-	b2Vec2 ps(float32::fmake(xd), float32::fmake(yd));
+	b2Vec2 ps((float32)(xd), (float32)(yd));
 
 	b2Vec2 pw = g_camera.ConvertScreenToWorld(ps);
 	test->MouseMove(pw);

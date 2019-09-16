@@ -95,7 +95,7 @@ int main(int argc, char** argv)
 		b2Vec2 position = body->GetPosition();
 		float32 angle = body->GetAngle();
 
-		printf("%4.2f %4.2f %4.2f\n", position.x.to_float(), position.y.to_float(), angle.to_float());
+		printf("%4.2f %4.2f %4.2f\n", (float)position.x, (float)position.y, (float)angle);
 	}
 
 	// When the world destructor is called, all bodies and joints are freed. This can

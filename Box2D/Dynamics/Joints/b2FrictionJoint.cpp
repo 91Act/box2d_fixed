@@ -243,9 +243,9 @@ void b2FrictionJoint::Dump()
 	b2Log("  jd.bodyA = bodies[%d];\n", indexA);
 	b2Log("  jd.bodyB = bodies[%d];\n", indexB);
 	b2Log("  jd.collideConnected = bool(%d);\n", m_collideConnected);
-	b2Log("  jd.localAnchorA.Set(%.15lef, %.15lef);\n", m_localAnchorA.x.to_float(), m_localAnchorA.y.to_float());
-	b2Log("  jd.localAnchorB.Set(%.15lef, %.15lef);\n", m_localAnchorB.x.to_float(), m_localAnchorB.y.to_float());
-	b2Log("  jd.maxForce = %.15lef;\n", m_maxForce.to_float());
-	b2Log("  jd.maxTorque = %.15lef;\n", m_maxTorque.to_float());
+	b2Log("  jd.localAnchorA.Set(%.15lef, %.15lef);\n", (float)m_localAnchorA.x, (float)m_localAnchorA.y);
+	b2Log("  jd.localAnchorB.Set(%.15lef, %.15lef);\n", (float)m_localAnchorB.x, (float)m_localAnchorB.y);
+	b2Log("  jd.maxForce = %.15lef;\n", (float)m_maxForce);
+	b2Log("  jd.maxTorque = %.15lef;\n", (float)m_maxTorque);
 	b2Log("  joints[%d] = m_world->CreateJoint(&jd);\n", m_index);
 }

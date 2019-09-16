@@ -530,18 +530,18 @@ void b2Body::Dump()
 	b2Log("{\n");
 	b2Log("  b2BodyDef bd;\n");
 	b2Log("  bd.type = b2BodyType(%d);\n", m_type);
-	b2Log("  bd.position.Set(%.15lef, %.15lef);\n", m_xf.p.x.to_float(), m_xf.p.y.to_float());
-	b2Log("  bd.angle = %.15lef;\n", m_sweep.a.to_float());
-	b2Log("  bd.linearVelocity.Set(%.15lef, %.15lef);\n", m_linearVelocity.x.to_float(), m_linearVelocity.y.to_float());
-	b2Log("  bd.angularVelocity = %.15lef;\n", m_angularVelocity.to_float());
-	b2Log("  bd.linearDamping = %.15lef;\n", m_linearDamping.to_float());
-	b2Log("  bd.angularDamping = %.15lef;\n", m_angularDamping.to_float());
+	b2Log("  bd.position.Set(%.15lef, %.15lef);\n", (float)m_xf.p.x, (float)m_xf.p.y);
+	b2Log("  bd.angle = %.15lef;\n", (float)m_sweep.a);
+	b2Log("  bd.linearVelocity.Set(%.15lef, %.15lef);\n", (float)m_linearVelocity.x, (float)m_linearVelocity.y);
+	b2Log("  bd.angularVelocity = %.15lef;\n", (float)m_angularVelocity);
+	b2Log("  bd.linearDamping = %.15lef;\n", (float)m_linearDamping);
+	b2Log("  bd.angularDamping = %.15lef;\n", (float)m_angularDamping);
 	b2Log("  bd.allowSleep = bool(%d);\n", m_flags & e_autoSleepFlag);
 	b2Log("  bd.awake = bool(%d);\n", m_flags & e_awakeFlag);
 	b2Log("  bd.fixedRotation = bool(%d);\n", m_flags & e_fixedRotationFlag);
 	b2Log("  bd.bullet = bool(%d);\n", m_flags & e_bulletFlag);
 	b2Log("  bd.active = bool(%d);\n", m_flags & e_activeFlag);
-	b2Log("  bd.gravityScale = %.15lef;\n", m_gravityScale.to_float());
+	b2Log("  bd.gravityScale = %.15lef;\n", (float)m_gravityScale);
 	b2Log("  bodies[%d] = m_world->CreateBody(&bd);\n", m_islandIndex);
 	b2Log("\n");
 	for (b2Fixture* f = m_fixtureList; f; f = f->m_next)
